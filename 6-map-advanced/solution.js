@@ -42,5 +42,29 @@ const tvShows = [
     watched: false,
   },
 ];
-
+// One including only the titles of the movies
+// - One including objects that include only the `title` and the `rating` properties
+// - One including only the titles of the movies, but:
+//   - If the rating is greater or equal to 9, we put the title in upper case.
+//   - Else, we make the title lower case.
 // Your code below
+
+const tvShowTitle = tvShows.map((tvShow) => {
+  return tvShow.title; 
+}); 
+
+const tvShowsTitleRating = tvShows.map((tvShow) => {
+  return tvShow.title + " " + tvShow.rating;
+}); 
+
+const tvShowTitleCase = tvShows.map((x) => {
+  if(x.rating >= 9) {
+    return x.title.toUpperCase(); 
+  } else {
+    return x.title.toLowerCase();
+  } 
+}); 
+
+console.log(tvShowTitle); 
+console.log(tvShowsTitleRating); 
+console.log(tvShowTitleCase); 

@@ -44,3 +44,17 @@ const tvShows = [
 ];
 
 // Your code below
+const watchesTvShows = tvShows.filter((seen) => {
+  if (seen.watched === true) {
+    return seen; 
+  }
+}); 
+const TvShows = tvShows.filter((rating) => {
+  if (rating.rating > 9) {
+    return rating;
+  }
+}); 
+
+console.log(watchesTvShows);
+console.log(TvShows);
+
